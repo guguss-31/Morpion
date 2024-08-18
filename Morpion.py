@@ -9,8 +9,11 @@ X_ou_O="X"
 
 morpion=ct.CTk()
 
+morpion.resizable(False, False)
+
 maximize_button.disable(morpion)
 minimize_button.disable(morpion)
+
 
 def reinitialiser():
     time.sleep(1)
@@ -346,44 +349,56 @@ def c9():
             X_ou_O="X"
     verifier()
 
-b1=ct.CTkButton(morpion,text=grille[0],width=100,height=100,fg_color="white",hover_color="white")
+frame1=ct.CTkFrame(morpion)
+frame1.grid(pady=10,padx=10,column=0,row=1)
+
+frame11=ct.CTkFrame(frame1,fg_color="transparent")
+frame11.grid(pady=21,padx=21,column=0,row=0)
+
+frame2=ct.CTkFrame(morpion)
+frame2.grid(pady=10,padx=10,column=0,row=0)
+
+frame22=ct.CTkFrame(frame2,fg_color="transparent")
+frame22.grid(pady=21,padx=21,column=0,row=0)
+
+b1=ct.CTkButton(frame11,text=grille[0],width=100,height=100,fg_color="white",hover_color="white")
 b1.grid(row=0,column=0)
 b1.bind("<Button-1>",lambda event:c1())
 
-b2=ct.CTkButton(morpion,text=grille[1],width=100,height=100,fg_color="white",hover_color="white")
+b2=ct.CTkButton(frame11,text=grille[1],width=100,height=100,fg_color="white",hover_color="white")
 b2.grid(row=0,column=1)
 b2.bind("<Button-1>",lambda event:c2())
 
-b3=ct.CTkButton(morpion,text=grille[2],width=100,height=100,fg_color="white",hover_color="white")
+b3=ct.CTkButton(frame11,text=grille[2],width=100,height=100,fg_color="white",hover_color="white")
 b3.grid(row=0,column=2)
 b3.bind("<Button-1>",lambda event:c3())
 
-b4=ct.CTkButton(morpion,text=grille[3],width=100,height=100,fg_color="white",hover_color="white")
+b4=ct.CTkButton(frame11,text=grille[3],width=100,height=100,fg_color="white",hover_color="white")
 b4.grid(row=1,column=0)
 b4.bind("<Button-1>",lambda event:c4())
 
-b5=ct.CTkButton(morpion,text=grille[4],width=100,height=100,fg_color="white",hover_color="white")
+b5=ct.CTkButton(frame11,text=grille[4],width=100,height=100,fg_color="white",hover_color="white")
 b5.grid(row=1,column=1)
 b5.bind("<Button-1>",lambda event:c5())
 
-b6=ct.CTkButton(morpion,text=grille[5],width=100,height=100,fg_color="white",hover_color="white")
+b6=ct.CTkButton(frame11,text=grille[5],width=100,height=100,fg_color="white",hover_color="white")
 b6.grid(row=1,column=2)
 b6.bind("<Button-1>",lambda event:c6())
 
-b7=ct.CTkButton(morpion,text=grille[6],width=100,height=100,fg_color="white",hover_color="white")
+b7=ct.CTkButton(frame11,text=grille[6],width=100,height=100,fg_color="white",hover_color="white")
 b7.grid(row=2,column=0)
 b7.bind("<Button-1>",lambda event:c7())
 
-b8=ct.CTkButton(morpion,text=grille[7],width=100,height=100,fg_color="white",hover_color="white")
+b8=ct.CTkButton(frame11,text=grille[7],width=100,height=100,fg_color="white",hover_color="white")
 b8.grid(row=2,column=1)
 b8.bind("<Button-1>",lambda event:c8())
 
-b9=ct.CTkButton(morpion,text=grille[8],width=100,height=100,fg_color="white",hover_color="white")
+b9=ct.CTkButton(frame11,text=grille[8],width=100,height=100,fg_color="white",hover_color="white")
 b9.grid(row=2,column=2)
 b9.bind("<Button-1>",lambda event:c9())
 
-tour=ct.CTkLabel(morpion,text=X_ou_O+"\n"+"C'est à "+X_ou_O+" de jouer !",fg_color="red",width=150,height=300)
-tour.grid(row=0,column=3,rowspan=3)
+tour=ct.CTkLabel(frame22,text=X_ou_O+"\n"+"C'est à "+X_ou_O+" de jouer !",fg_color="red",width=300,height=100,corner_radius=21)
+tour.grid(row=0,column=0)
 
 morpion.mainloop()
 
