@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Morpion" src="https://github.com/user-attachments/assets/e7dfe1d2-5e4a-4848-88aa-4e2c8468de09" width="500px" />
+  <img alt="Morpion" src="https://github.com/user-attachments/assets/59fd4add-98e0-4324-ab3f-b1e04ebe4f8a" width="500px" />
   <h1 align="center">Morpion</h1>
 </p>
 
