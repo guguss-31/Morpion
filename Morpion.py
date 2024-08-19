@@ -250,154 +250,60 @@ def verifier():
         CTkMessagebox(title="Winer !",message="Pas de gagnant-e , match nul !",icon="check", option_1="OK")
         reinitialiser()
 
-def c1():
+def c9(bouton,tableau,chiffre):
     global X_ou_O
-    if grille[0]==1:
-        b1.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[0]=X_ou_O
+    if grille[tableau]==chiffre:
+        bouton.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
+        grille[tableau]=X_ou_O
         if X_ou_O=="X":
             X_ou_O="O"
         else:
             X_ou_O="X"
     verifier()
 
-def c2():
-    global X_ou_O
-    if grille[1]==2:
-        b2.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[1]=X_ou_O
-        if X_ou_O=="X":
-            X_ou_O="O"
-        else:
-            X_ou_O="X"
-    verifier()
-
-def c3():
-    global X_ou_O
-    if grille[2]==3:
-        b3.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[2]=X_ou_O
-        if X_ou_O=="X":
-            X_ou_O="O"
-        else:
-            X_ou_O="X"
-    verifier()
-
-def c4():
-    global X_ou_O
-    if grille[3]==4:
-        b4.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[3]=X_ou_O
-        if X_ou_O=="X":
-            X_ou_O="O"
-        else:
-            X_ou_O="X"
-    verifier()
-
-def c5():
-    global X_ou_O
-    if grille[4]==5:
-        b5.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[4]=X_ou_O
-        if X_ou_O=="X":
-            X_ou_O="O"
-        else:
-            X_ou_O="X"
-    verifier()
-
-def c6():
-    global X_ou_O
-    if grille[5]==6:
-        b6.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[5]=X_ou_O
-        if X_ou_O=="X":
-            X_ou_O="O"
-        else:
-            X_ou_O="X"
-    verifier()
-
-def c7():
-    global X_ou_O
-    if grille[6]==7:
-        b7.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[6]=X_ou_O
-        if X_ou_O=="X":
-            X_ou_O="O"
-        else:
-            X_ou_O="X"
-    verifier()
-
-def c8():
-    global X_ou_O
-    if grille[7]==8:
-        b8.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[7]=X_ou_O
-        if X_ou_O=="X":
-            X_ou_O="O"
-        else:
-            X_ou_O="X"
-    verifier()
-
-def c9():
-    global X_ou_O
-    if grille[8]==9:
-        b9.configure(text=X_ou_O,fg_color="#000000",hover_color="#000000")
-        grille[8]=X_ou_O
-        if X_ou_O=="X":
-            X_ou_O="O"
-        else:
-            X_ou_O="X"
-    verifier()
-
-frame1=ct.CTkFrame(morpion)
+frame1=ct.CTkFrame(morpion,fg_color="transparent")
 frame1.grid(pady=10,padx=10,column=0,row=1)
 
-frame11=ct.CTkFrame(frame1,fg_color="transparent")
-frame11.grid(pady=21,padx=21,column=0,row=0)
-
-frame2=ct.CTkFrame(morpion)
+frame2=ct.CTkFrame(morpion,fg_color="transparent")
 frame2.grid(pady=10,padx=10,column=0,row=0)
 
-frame22=ct.CTkFrame(frame2,fg_color="transparent")
-frame22.grid(pady=21,padx=21,column=0,row=0)
-
-b1=ct.CTkButton(frame11,text=grille[0],width=100,height=100,fg_color="white",hover_color="white")
+b1=ct.CTkButton(frame1,text=grille[0],width=100,height=100,fg_color="white",hover_color="white")
 b1.grid(row=0,column=0)
-b1.bind("<Button-1>",lambda event:c1())
+b1.bind("<Button-1>",lambda event:c9(b1,0,1))
 
-b2=ct.CTkButton(frame11,text=grille[1],width=100,height=100,fg_color="white",hover_color="white")
+b2=ct.CTkButton(frame1,text=grille[1],width=100,height=100,fg_color="white",hover_color="white")
 b2.grid(row=0,column=1)
-b2.bind("<Button-1>",lambda event:c2())
+b2.bind("<Button-1>",lambda event:c9(b2,1,2))
 
-b3=ct.CTkButton(frame11,text=grille[2],width=100,height=100,fg_color="white",hover_color="white")
+b3=ct.CTkButton(frame1,text=grille[2],width=100,height=100,fg_color="white",hover_color="white")
 b3.grid(row=0,column=2)
-b3.bind("<Button-1>",lambda event:c3())
+b3.bind("<Button-1>",lambda event:c9(b3,2,3))
 
-b4=ct.CTkButton(frame11,text=grille[3],width=100,height=100,fg_color="white",hover_color="white")
+b4=ct.CTkButton(frame1,text=grille[3],width=100,height=100,fg_color="white",hover_color="white")
 b4.grid(row=1,column=0)
-b4.bind("<Button-1>",lambda event:c4())
+b4.bind("<Button-1>",lambda event:c9(b4,3,4))
 
-b5=ct.CTkButton(frame11,text=grille[4],width=100,height=100,fg_color="white",hover_color="white")
+b5=ct.CTkButton(frame1,text=grille[4],width=100,height=100,fg_color="white",hover_color="white")
 b5.grid(row=1,column=1)
-b5.bind("<Button-1>",lambda event:c5())
+b5.bind("<Button-1>",lambda event:c9(b5,4,5))
 
-b6=ct.CTkButton(frame11,text=grille[5],width=100,height=100,fg_color="white",hover_color="white")
+b6=ct.CTkButton(frame1,text=grille[5],width=100,height=100,fg_color="white",hover_color="white")
 b6.grid(row=1,column=2)
-b6.bind("<Button-1>",lambda event:c6())
+b6.bind("<Button-1>",lambda event:c9(b6,5,6))
 
-b7=ct.CTkButton(frame11,text=grille[6],width=100,height=100,fg_color="white",hover_color="white")
+b7=ct.CTkButton(frame1,text=grille[6],width=100,height=100,fg_color="white",hover_color="white")
 b7.grid(row=2,column=0)
-b7.bind("<Button-1>",lambda event:c7())
+b7.bind("<Button-1>",lambda event:c9(b7,6,7))
 
-b8=ct.CTkButton(frame11,text=grille[7],width=100,height=100,fg_color="white",hover_color="white")
+b8=ct.CTkButton(frame1,text=grille[7],width=100,height=100,fg_color="white",hover_color="white")
 b8.grid(row=2,column=1)
-b8.bind("<Button-1>",lambda event:c8())
+b8.bind("<Button-1>",lambda event:c9(b8,7,8))
 
-b9=ct.CTkButton(frame11,text=grille[8],width=100,height=100,fg_color="white",hover_color="white")
+b9=ct.CTkButton(frame1,text=grille[8],width=100,height=100,fg_color="white",hover_color="white")
 b9.grid(row=2,column=2)
-b9.bind("<Button-1>",lambda event:c9())
+b9.bind("<Button-1>",lambda event:c9(b9,8,9))
 
-tour=ct.CTkLabel(frame22,text=X_ou_O+"\n"+"C'est à "+X_ou_O+" de jouer !",fg_color="red",width=300,height=100,corner_radius=21)
+tour=ct.CTkLabel(frame2,text=X_ou_O+"\n"+"C'est à "+X_ou_O+" de jouer !",fg_color="red",width=300,height=100,corner_radius=21)
 tour.grid(row=0,column=0)
 
 morpion.mainloop()
