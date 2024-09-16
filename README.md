@@ -25,5 +25,5 @@ screenshots :
 >![image](https://github.com/user-attachments/assets/06194267-d369-4f9d-9445-964871d4d0c9)
 >![image](https://github.com/user-attachments/assets/0b14d61f-5f07-4754-ac5f-948001e974cd)
 
-__________________________________________
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif"/><br>
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="Star" width="50" height="50" />**If you like it , you can add me a star 👍**<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png" alt="Star" width="50" height="50" />
